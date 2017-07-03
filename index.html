@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+</head>
+<body class="container jumbotron">
+<h1 style="text-align: center">
+    Students characteristics
+</h1>
+<script type="application/javascript">
+
+    var students_profile = [{
+        firstName: "Kevin",
+        lastName: "Mbuisha",
+        likes: ['poetry','programming','art'],
+        talents: ['soccer','mind games','back-end programming'],
+        skills: ['customer service', 'web design','web development']
+    },
+        {
+            firstName: "Enodie",
+            lastName: "Moboni",
+            likes: ['music','america','shoes'],
+            talents: ['making music','soccer','front-end programming'],
+            skills: ['customer service', 'web design','web development']
+        },
+        {
+            firstName: "Mandisa",
+            lastName: "Dludom",
+            likes: ['music','programming','sopies'],
+            talents: ['observing','maths','backend programming'],
+            skills: ['customer service', 'web design','web development']
+        },
+        {
+            firstName: "Keith",
+            lastName: "Brown",
+            likes: ['documentaries','art','music'],
+            talents: ['sing','run','play guitar'],
+            skills: ['customer service', 'web design','web development']
+        }];
+
+    students_profile.forEach(function (student_profile, index) {
+        document.write('<div class="table-bordered">');
+        document.write(student_profile.firstName + ' enjoys:');
+
+        student_profile.likes.forEach(function (like, index) {
+            document.write('<ul>' + like + '</ul>');
+        });
+
+        document.write(' He also has the following skills:');
+
+        student_profile.skills.forEach(function (skill, index) {
+            document.write('<ul>' + skill + '</ul>');
+        });
+        document.write('</div>');
+        document.write('</br>');
+
+    });
+
+</script>
+</body>
+</html>
